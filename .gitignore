@@ -1,2 +1,8 @@
 
 .svg2shenzhen-cache/
+
+*.kicad_pcb-bak
+
+*.bak
+
+*.net
