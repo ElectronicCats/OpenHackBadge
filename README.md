@@ -1,2 +1,1 @@
-# badge-openhack
-
+OpenHack
