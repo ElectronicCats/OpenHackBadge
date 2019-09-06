@@ -10,43 +10,10 @@ Date "2019-08-29"
 Rev "0.1"
 Comp "Electronic Cats"
 Comment1 "Andres Sabas"
-Comment2 "Open Hack Guatemala"
-Comment3 "Digetech"
-Comment4 ""
+Comment2 "Eduardo Contreras"
+Comment3 "Open Hack Guatemala"
+Comment4 "Digetech"
 $EndDescr
-$Comp
-L MCU_Microchip_SAMD:ATSAMD11C14A-SS U1
-U 1 1 5D682696
-P 5270 3340
-F 0 "U1" H 4950 3990 50  0000 C CNN
-F 1 "ATSAMD11C14A-SS" H 5675 3995 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5270 2290 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42363-SAM-D11_Datasheet.pdf" H 5270 2640 50  0001 C CNN
-	1    5270 3340
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:USB_B_Micro J2
-U 1 1 5D6831F0
-P 2250 2820
-F 0 "J2" H 2307 3287 50  0000 C CNN
-F 1 "USB_B_Micro" H 2307 3196 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 2400 2770 50  0001 C CNN
-F 3 "~" H 2400 2770 50  0001 C CNN
-	1    2250 2820
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:LED D1
-U 1 1 5D683A7E
-P 7300 2000
-F 0 "D1" H 7293 2216 50  0000 C CNN
-F 1 "LED" H 7293 2125 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7300 2000 50  0001 C CNN
-F 3 "~" H 7300 2000 50  0001 C CNN
-	1    7300 2000
-	-1   0    0    1   
-$EndComp
 $Comp
 L power:GND #PWR08
 U 1 1 5D6871A5
@@ -63,28 +30,6 @@ Text Label 2700 2820 0    50   ~ 0
 D+
 Text Label 2700 2920 0    50   ~ 0
 D-
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5D688B75
-P 2345 4450
-F 0 "BT1" H 2463 4546 50  0000 L CNN
-F 1 "Battery_Cell" H 2463 4455 50  0000 L CNN
-F 2 "Batteries:BAT-HLD-012-SMT-OTL" V 2345 4510 50  0001 C CNN
-F 3 "~" V 2345 4510 50  0001 C CNN
-	1    2345 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5D6896B5
-P 3250 4370
-F 0 "C1" H 3365 4416 50  0000 L CNN
-F 1 "0.1uF" H 3365 4325 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3288 4220 50  0001 C CNN
-F 3 "~" H 3250 4370 50  0001 C CNN
-	1    3250 4370
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5270 2640 5270 2550
 Wire Wire Line
@@ -98,17 +43,6 @@ F 1 "GND" H 5275 3962 50  0000 C CNN
 F 2 "" H 5270 4135 50  0001 C CNN
 F 3 "" H 5270 4135 50  0001 C CNN
 	1    5270 4135
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR012
-U 1 1 5D68E8B9
-P 2345 4160
-F 0 "#PWR012" H 2345 4010 50  0001 C CNN
-F 1 "+3.3V" H 2360 4333 50  0000 C CNN
-F 2 "" H 2345 4160 50  0001 C CNN
-F 3 "" H 2345 4160 50  0001 C CNN
-	1    2345 4160
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -212,73 +146,28 @@ D5
 Text Label 5950 3440 0    50   ~ 0
 D6
 $Comp
-L electroniccats:AP2112K-3.3TRG1 U2
-U 1 1 5D6D3F02
-P 4800 5670
-F 0 "U2" H 4800 6140 50  0000 C CNN
-F 1 "AP2112K-3.3TRG1" H 4800 6049 50  0000 C CNN
-F 2 "SOT95P285X140-5N" H 4800 5670 50  0001 L BNN
-F 3 "" H 4800 5670 50  0001 L BNN
-F 4 "0.15 USD" H 4800 5670 50  0001 L BNN "Campo4"
-F 5 "Diodes Inc." H 4800 5670 50  0001 L BNN "Campo5"
-F 6 "AP2112K-3.3TRG1" H 4800 5670 50  0001 L BNN "Campo6"
-F 7 "Good" H 4800 5670 50  0001 L BNN "Campo7"
-F 8 "AP2112 Series 0.6 A 3.3 V Fixed Output SMT LDO Linear Regulator - SOT23-5" H 4800 5670 50  0001 L BNN "Campo8"
-	1    4800 5670
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3790 5470 3790 5310
-$Comp
 L power:+3.3V #PWR020
 U 1 1 5D6D96BD
-P 5620 5410
-F 0 "#PWR020" H 5620 5260 50  0001 C CNN
-F 1 "+3.3V" H 5635 5583 50  0000 C CNN
-F 2 "" H 5620 5410 50  0001 C CNN
-F 3 "" H 5620 5410 50  0001 C CNN
-	1    5620 5410
+P 5995 5230
+F 0 "#PWR020" H 5995 5080 50  0001 C CNN
+F 1 "+3.3V" H 6010 5403 50  0000 C CNN
+F 2 "" H 5995 5230 50  0001 C CNN
+F 3 "" H 5995 5230 50  0001 C CNN
+	1    5995 5230
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3790 5470 4140 5470
-$Comp
-L power:VCC #PWR019
-U 1 1 5D6DAEF3
-P 3790 5310
-F 0 "#PWR019" H 3790 5160 50  0001 C CNN
-F 1 "VCC" H 3807 5483 50  0000 C CNN
-F 2 "" H 3790 5310 50  0001 C CNN
-F 3 "" H 3790 5310 50  0001 C CNN
-	1    3790 5310
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 5470 5620 5470
-Wire Wire Line
-	5620 5470 5620 5410
-Wire Wire Line
-	5300 5870 5370 5870
-Wire Wire Line
-	5370 5870 5370 5940
 $Comp
 L power:GND #PWR021
 U 1 1 5D6DD360
-P 5370 5940
-F 0 "#PWR021" H 5370 5690 50  0001 C CNN
-F 1 "GND" H 5375 5767 50  0000 C CNN
-F 2 "" H 5370 5940 50  0001 C CNN
-F 3 "" H 5370 5940 50  0001 C CNN
-	1    5370 5940
+P 5175 5990
+F 0 "#PWR021" H 5175 5740 50  0001 C CNN
+F 1 "GND" H 5180 5817 50  0000 C CNN
+F 2 "" H 5175 5990 50  0001 C CNN
+F 3 "" H 5175 5990 50  0001 C CNN
+	1    5175 5990
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4300 5670 4140 5670
-Wire Wire Line
-	4140 5670 4140 5470
 Connection ~ 4140 5470
-Wire Wire Line
-	4140 5470 4300 5470
 Wire Wire Line
 	2250 3220 2250 3290
 Wire Wire Line
@@ -307,361 +196,38 @@ F 3 "" H 2680 2590 50  0001 C CNN
 	1    2680 2590
 	1    0    0    -1  
 $EndComp
-$Comp
-L Diode:MBR340 D8
-U 1 1 5D6E5F09
-P 5400 5070
-F 0 "D8" V 5446 4991 50  0000 R CNN
-F 1 "MBR120" V 5355 4991 50  0000 R CNN
-F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 5400 4895 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/MBR340-D.PDF" H 5400 5070 50  0001 C CNN
-	1    5400 5070
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R1
-U 1 1 5D6E72D0
-P 7650 2000
-F 0 "R1" V 7454 2000 50  0000 C CNN
-F 1 "180" V 7545 2000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7650 2000 50  0001 C CNN
-F 3 "~" H 7650 2000 50  0001 C CNN
-	1    7650 2000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7450 2000 7550 2000
-Wire Wire Line
-	7750 2000 7910 2000
-Wire Wire Line
-	7910 2000 7910 2020
-$Comp
-L power:GND #PWR02
-U 1 1 5D6EF2F2
-P 7910 2020
-F 0 "#PWR02" H 7910 1770 50  0001 C CNN
-F 1 "GND" H 7915 1847 50  0000 C CNN
-F 2 "" H 7910 2020 50  0001 C CNN
-F 3 "" H 7910 2020 50  0001 C CNN
-	1    7910 2020
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7150 2000 7080 2000
-Text Label 7080 2000 0    50   ~ 0
+	7425 2150 7355 2150
+Text Label 7355 2150 0    50   ~ 0
 D0
-$Comp
-L Device:LED D2
-U 1 1 5D6F12DD
-P 7370 2590
-F 0 "D2" H 7363 2806 50  0000 C CNN
-F 1 "LED" H 7363 2715 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7370 2590 50  0001 C CNN
-F 3 "~" H 7370 2590 50  0001 C CNN
-	1    7370 2590
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R2
-U 1 1 5D6F12E3
-P 7720 2590
-F 0 "R2" V 7524 2590 50  0000 C CNN
-F 1 "180" V 7615 2590 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7720 2590 50  0001 C CNN
-F 3 "~" H 7720 2590 50  0001 C CNN
-	1    7720 2590
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7520 2590 7620 2590
-Wire Wire Line
-	7820 2590 7980 2590
-Wire Wire Line
-	7980 2590 7980 2610
-$Comp
-L power:GND #PWR06
-U 1 1 5D6F12EC
-P 7980 2610
-F 0 "#PWR06" H 7980 2360 50  0001 C CNN
-F 1 "GND" H 7985 2437 50  0000 C CNN
-F 2 "" H 7980 2610 50  0001 C CNN
-F 3 "" H 7980 2610 50  0001 C CNN
-	1    7980 2610
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7220 2590 7150 2590
-Text Label 7150 2590 0    50   ~ 0
+	7420 2590 7350 2590
+Text Label 7350 2590 0    50   ~ 0
 D1
-$Comp
-L Device:LED D3
-U 1 1 5D6F4F4F
-P 7350 3030
-F 0 "D3" H 7343 3246 50  0000 C CNN
-F 1 "LED" H 7343 3155 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7350 3030 50  0001 C CNN
-F 3 "~" H 7350 3030 50  0001 C CNN
-	1    7350 3030
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 5D6F4F55
-P 7700 3030
-F 0 "R3" V 7504 3030 50  0000 C CNN
-F 1 "180" V 7595 3030 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 3030 50  0001 C CNN
-F 3 "~" H 7700 3030 50  0001 C CNN
-	1    7700 3030
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7500 3030 7600 3030
-Wire Wire Line
-	7800 3030 7960 3030
-Wire Wire Line
-	7960 3030 7960 3050
-$Comp
-L power:GND #PWR07
-U 1 1 5D6F4F5E
-P 7960 3050
-F 0 "#PWR07" H 7960 2800 50  0001 C CNN
-F 1 "GND" H 7965 2877 50  0000 C CNN
-F 2 "" H 7960 3050 50  0001 C CNN
-F 3 "" H 7960 3050 50  0001 C CNN
-	1    7960 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 3030 7130 3030
-Text Label 7130 3030 0    50   ~ 0
+	7400 3030 7330 3030
+Text Label 7330 3030 0    50   ~ 0
 D2
-$Comp
-L Device:LED D4
-U 1 1 5D6F6817
-P 7350 3470
-F 0 "D4" H 7343 3686 50  0000 C CNN
-F 1 "LED" H 7343 3595 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7350 3470 50  0001 C CNN
-F 3 "~" H 7350 3470 50  0001 C CNN
-	1    7350 3470
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R4
-U 1 1 5D6F681D
-P 7700 3470
-F 0 "R4" V 7504 3470 50  0000 C CNN
-F 1 "180" V 7595 3470 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7700 3470 50  0001 C CNN
-F 3 "~" H 7700 3470 50  0001 C CNN
-	1    7700 3470
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7500 3470 7600 3470
-Wire Wire Line
-	7800 3470 7960 3470
-Wire Wire Line
-	7960 3470 7960 3490
-$Comp
-L power:GND #PWR09
-U 1 1 5D6F6826
-P 7960 3490
-F 0 "#PWR09" H 7960 3240 50  0001 C CNN
-F 1 "GND" H 7965 3317 50  0000 C CNN
-F 2 "" H 7960 3490 50  0001 C CNN
-F 3 "" H 7960 3490 50  0001 C CNN
-	1    7960 3490
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7200 3470 7130 3470
-Text Label 7130 3470 0    50   ~ 0
+	7400 3470 7330 3470
+Text Label 7330 3470 0    50   ~ 0
 D3
-$Comp
-L Device:LED D5
-U 1 1 5D6F8CA4
-P 7370 3910
-F 0 "D5" H 7363 4126 50  0000 C CNN
-F 1 "LED" H 7363 4035 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7370 3910 50  0001 C CNN
-F 3 "~" H 7370 3910 50  0001 C CNN
-	1    7370 3910
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R5
-U 1 1 5D6F8CAA
-P 7720 3910
-F 0 "R5" V 7524 3910 50  0000 C CNN
-F 1 "180" V 7615 3910 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7720 3910 50  0001 C CNN
-F 3 "~" H 7720 3910 50  0001 C CNN
-	1    7720 3910
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7520 3910 7620 3910
-Wire Wire Line
-	7820 3910 7980 3910
-Wire Wire Line
-	7980 3910 7980 3930
-$Comp
-L power:GND #PWR010
-U 1 1 5D6F8CB3
-P 7980 3930
-F 0 "#PWR010" H 7980 3680 50  0001 C CNN
-F 1 "GND" H 7985 3757 50  0000 C CNN
-F 2 "" H 7980 3930 50  0001 C CNN
-F 3 "" H 7980 3930 50  0001 C CNN
-	1    7980 3930
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7220 3910 7150 3910
-Text Label 7150 3910 0    50   ~ 0
+	7420 3910 7350 3910
+Text Label 7350 3910 0    50   ~ 0
 D4
-$Comp
-L Device:LED D6
-U 1 1 5D6FD015
-P 7390 4350
-F 0 "D6" H 7383 4566 50  0000 C CNN
-F 1 "LED" H 7383 4475 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7390 4350 50  0001 C CNN
-F 3 "~" H 7390 4350 50  0001 C CNN
-	1    7390 4350
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R6
-U 1 1 5D6FD01B
-P 7740 4350
-F 0 "R6" V 7544 4350 50  0000 C CNN
-F 1 "180" V 7635 4350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7740 4350 50  0001 C CNN
-F 3 "~" H 7740 4350 50  0001 C CNN
-	1    7740 4350
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7540 4350 7640 4350
-Wire Wire Line
-	7840 4350 8000 4350
-Wire Wire Line
-	8000 4350 8000 4370
-$Comp
-L power:GND #PWR014
-U 1 1 5D6FD024
-P 8000 4370
-F 0 "#PWR014" H 8000 4120 50  0001 C CNN
-F 1 "GND" H 8005 4197 50  0000 C CNN
-F 2 "" H 8000 4370 50  0001 C CNN
-F 3 "" H 8000 4370 50  0001 C CNN
-	1    8000 4370
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7240 4350 7170 4350
-Text Label 7170 4350 0    50   ~ 0
+	7440 4350 7370 4350
+Text Label 7370 4350 0    50   ~ 0
 D5
-$Comp
-L Device:LED D7
-U 1 1 5D6FF1AD
-P 7390 4790
-F 0 "D7" H 7383 5006 50  0000 C CNN
-F 1 "LED" H 7383 4915 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7390 4790 50  0001 C CNN
-F 3 "~" H 7390 4790 50  0001 C CNN
-	1    7390 4790
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R7
-U 1 1 5D6FF1B3
-P 7740 4790
-F 0 "R7" V 7544 4790 50  0000 C CNN
-F 1 "180" V 7635 4790 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7740 4790 50  0001 C CNN
-F 3 "~" H 7740 4790 50  0001 C CNN
-	1    7740 4790
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7540 4790 7640 4790
-Wire Wire Line
-	7840 4790 8000 4790
-Wire Wire Line
-	8000 4790 8000 4810
-$Comp
-L power:GND #PWR017
-U 1 1 5D6FF1BC
-P 8000 4810
-F 0 "#PWR017" H 8000 4560 50  0001 C CNN
-F 1 "GND" H 8005 4637 50  0000 C CNN
-F 2 "" H 8000 4810 50  0001 C CNN
-F 3 "" H 8000 4810 50  0001 C CNN
-	1    8000 4810
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7240 4790 7170 4790
-Text Label 7170 4790 0    50   ~ 0
+	7440 4790 7370 4790
+Text Label 7370 4790 0    50   ~ 0
 D6
-$Comp
-L Device:LED D9
-U 1 1 5D701553
-P 7400 5220
-F 0 "D9" H 7393 5436 50  0000 C CNN
-F 1 "LED" H 7393 5345 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7400 5220 50  0001 C CNN
-F 3 "~" H 7400 5220 50  0001 C CNN
-	1    7400 5220
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R8
-U 1 1 5D701559
-P 7750 5220
-F 0 "R8" V 7554 5220 50  0000 C CNN
-F 1 "180" V 7645 5220 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7750 5220 50  0001 C CNN
-F 3 "~" H 7750 5220 50  0001 C CNN
-	1    7750 5220
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	7550 5220 7650 5220
-Wire Wire Line
-	7850 5220 8010 5220
-Wire Wire Line
-	8010 5220 8010 5240
-$Comp
-L power:GND #PWR018
-U 1 1 5D701562
-P 8010 5240
-F 0 "#PWR018" H 8010 4990 50  0001 C CNN
-F 1 "GND" H 8015 5067 50  0000 C CNN
-F 2 "" H 8010 5240 50  0001 C CNN
-F 3 "" H 8010 5240 50  0001 C CNN
-	1    8010 5240
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7250 5220 7180 5220
-Text Label 7180 5220 2    50   ~ 0
+	7450 5220 7380 5220
+Text Label 7380 5220 2    50   ~ 0
 SWDIO
-$Comp
-L Connector:Conn_01x04_Male J1
-U 1 1 5D702E8C
-P 3690 1920
-F 0 "J1" H 3798 2201 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 3798 2110 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 3690 1920 50  0001 C CNN
-F 3 "~" H 3690 1920 50  0001 C CNN
-	1    3690 1920
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3890 1920 4070 1920
 Wire Wire Line
@@ -700,4 +266,422 @@ Wire Wire Line
 	4460 1820 4460 1840
 Wire Wire Line
 	3890 1820 4460 1820
+Wire Wire Line
+	4140 5470 4425 5470
+Wire Wire Line
+	4425 5570 4140 5570
+Wire Wire Line
+	4140 5570 4140 5470
+$Comp
+L power:GND #PWR0101
+U 1 1 5D7237B9
+P 4725 5940
+F 0 "#PWR0101" H 4725 5690 50  0001 C CNN
+F 1 "GND" H 4730 5767 50  0000 C CNN
+F 2 "" H 4725 5940 50  0001 C CNN
+F 3 "" H 4725 5940 50  0001 C CNN
+	1    4725 5940
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 5870 4725 5940
+Wire Wire Line
+	3930 5600 3930 5470
+Connection ~ 3930 5470
+Wire Wire Line
+	3930 5470 4140 5470
+Wire Wire Line
+	5025 5470 5175 5470
+Wire Wire Line
+	5175 5545 5175 5470
+Wire Wire Line
+	5175 5990 5175 5845
+$Comp
+L power:GND #PWR0102
+U 1 1 5D72EB91
+P 3930 5975
+F 0 "#PWR0102" H 3930 5725 50  0001 C CNN
+F 1 "GND" H 3935 5802 50  0000 C CNN
+F 2 "" H 3930 5975 50  0001 C CNN
+F 3 "" H 3930 5975 50  0001 C CNN
+	1    3930 5975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3930 5900 3930 5975
+Wire Wire Line
+	5295 5470 5175 5470
+Connection ~ 5175 5470
+Wire Wire Line
+	5995 5230 5995 5470
+Wire Wire Line
+	5995 5470 5690 5470
+$Comp
+L power:+BATT #PWR0103
+U 1 1 5D73DFF0
+P 2345 4160
+F 0 "#PWR0103" H 2345 4010 50  0001 C CNN
+F 1 "+BATT" H 2360 4333 50  0000 C CNN
+F 2 "" H 2345 4160 50  0001 C CNN
+F 3 "" H 2345 4160 50  0001 C CNN
+	1    2345 4160
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0104
+U 1 1 5D73E5B4
+P 5690 5220
+F 0 "#PWR0104" H 5690 5070 50  0001 C CNN
+F 1 "+BATT" H 5705 5393 50  0000 C CNN
+F 2 "" H 5690 5220 50  0001 C CNN
+F 3 "" H 5690 5220 50  0001 C CNN
+	1    5690 5220
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5690 5220 5690 5470
+Connection ~ 5690 5470
+Wire Wire Line
+	5690 5470 5595 5470
+$Comp
+L power:VCC #PWR0105
+U 1 1 5D740E4B
+P 3625 5310
+F 0 "#PWR0105" H 3625 5160 50  0001 C CNN
+F 1 "VCC" H 3642 5483 50  0000 C CNN
+F 2 "" H 3625 5310 50  0001 C CNN
+F 3 "" H 3625 5310 50  0001 C CNN
+	1    3625 5310
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3625 5470 3625 5310
+Wire Wire Line
+	3625 5470 3930 5470
+Wire Wire Line
+	8445 2150 8445 3245
+Wire Wire Line
+	8445 3245 8545 3245
+Wire Wire Line
+	8545 3345 8415 3345
+Wire Wire Line
+	8415 3345 8415 2590
+Wire Wire Line
+	8545 3445 8395 3445
+Wire Wire Line
+	8395 3445 8395 3030
+Wire Wire Line
+	8545 3545 8370 3545
+Wire Wire Line
+	8370 3545 8370 3470
+Wire Wire Line
+	8545 3645 8370 3645
+Wire Wire Line
+	8370 3645 8370 3910
+Wire Wire Line
+	8395 3745 8395 4350
+Wire Wire Line
+	8545 3745 8395 3745
+Wire Wire Line
+	8545 3845 8420 3845
+Wire Wire Line
+	8420 3845 8420 4790
+Wire Wire Line
+	8450 5220 8450 3945
+Wire Wire Line
+	8450 3945 8545 3945
+Wire Wire Line
+	9180 3645 8945 3645
+Wire Wire Line
+	7720 2590 8415 2590
+Wire Wire Line
+	7700 3030 8395 3030
+Wire Wire Line
+	7700 3470 8370 3470
+Wire Wire Line
+	7720 3910 8370 3910
+Wire Wire Line
+	7740 4350 8395 4350
+Wire Wire Line
+	7740 4790 8420 4790
+Wire Wire Line
+	7750 5220 8450 5220
+Wire Wire Line
+	8445 2150 7725 2150
+Connection ~ 9180 3645
+Wire Wire Line
+	8945 3245 9180 3245
+$Comp
+L Device:C C3
+U 1 1 5D728533
+P 5175 5695
+F 0 "C3" H 5290 5741 50  0000 L CNN
+F 1 "10uF" H 5290 5650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5213 5545 50  0001 C CNN
+F 3 "~" H 5175 5695 50  0001 C CNN
+F 4 "885012107010" H 0   0   50  0001 C CNN "manf#"
+	1    5175 5695
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D725D73
+P 3930 5750
+F 0 "C2" H 4045 5796 50  0000 L CNN
+F 1 "10uF" H 4045 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3968 5600 50  0001 C CNN
+F 3 "~" H 3930 5750 50  0001 C CNN
+F 4 "885012107010" H 0   0   50  0001 C CNN "manf#"
+	1    3930 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AP2112K-3.3 U2
+U 1 1 5D71E01F
+P 4725 5570
+F 0 "U2" H 4725 5912 50  0000 C CNN
+F 1 "AP2112K-3.3" H 4725 5821 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4725 5895 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 4725 5670 50  0001 C CNN
+F 4 "AP2112K-3.3TRG1" H 0   0   50  0001 C CNN "manf#"
+	1    4725 5570
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5D702E8C
+P 3690 1920
+F 0 "J1" H 3798 2201 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 3798 2110 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 3690 1920 50  0001 C CNN
+F 3 "~" H 3690 1920 50  0001 C CNN
+F 4 "~" H 0   0   50  0001 C CNN "manf#"
+	1    3690 1920
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5D701553
+P 7600 5220
+F 0 "D8" H 7593 5436 50  0000 C CNN
+F 1 "R_LED" H 7593 5345 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7600 5220 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7600 5220 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7600 5220
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5D6FF1AD
+P 7590 4790
+F 0 "D7" H 7583 5006 50  0000 C CNN
+F 1 "R_LED" H 7583 4915 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7590 4790 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7590 4790 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7590 4790
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5D6FD015
+P 7590 4350
+F 0 "D6" H 7583 4566 50  0000 C CNN
+F 1 "R_LED" H 7583 4475 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7590 4350 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7590 4350 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7590 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5D6F8CA4
+P 7570 3910
+F 0 "D5" H 7563 4126 50  0000 C CNN
+F 1 "R_LED" H 7563 4035 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7570 3910 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7570 3910 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7570 3910
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5D6F6817
+P 7550 3470
+F 0 "D4" H 7543 3686 50  0000 C CNN
+F 1 "R_LED" H 7543 3595 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7550 3470 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7550 3470 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7550 3470
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5D6F4F4F
+P 7550 3030
+F 0 "D3" H 7543 3246 50  0000 C CNN
+F 1 "R_LED" H 7543 3155 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7550 3030 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7550 3030 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7550 3030
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5D6F12DD
+P 7570 2590
+F 0 "D2" H 7563 2806 50  0000 C CNN
+F 1 "R_LED" H 7563 2715 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7570 2590 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7570 2590 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7570 2590
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:MBR340 D9
+U 1 1 5D6E5F09
+P 5445 5470
+F 0 "D9" V 5491 5391 50  0000 R CNN
+F 1 "MBR120" V 5400 5391 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123F" H 5445 5295 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/308/MBR120VLSFT1-D-107081.pdf" H 5445 5470 50  0001 C CNN
+F 4 "MBR120VLSFT3G" H 0   0   50  0001 C CNN "manf#"
+	1    5445 5470
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D6896B5
+P 3250 4370
+F 0 "C1" H 3365 4416 50  0000 L CNN
+F 1 "0.1uF" H 3365 4325 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3288 4220 50  0001 C CNN
+F 3 "~" H 3250 4370 50  0001 C CNN
+F 4 "885012207072" H 0   0   50  0001 C CNN "manf#"
+	1    3250 4370
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5D688B75
+P 2345 4450
+F 0 "BT1" H 2463 4546 50  0000 L CNN
+F 1 "Battery_Cell" H 2463 4455 50  0000 L CNN
+F 2 "Batteries:BAT-HLD-012-SMT-OTL" V 2345 4510 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/238/BAT-HLD-012-SMT%20Diagram-1175215.pdf" V 2345 4510 50  0001 C CNN
+F 4 "BAT-HLD-012-SMT" H 0   0   50  0001 C CNN "manf#"
+	1    2345 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J2
+U 1 1 5D6831F0
+P 2250 2820
+F 0 "J2" H 2307 3287 50  0000 C CNN
+F 1 "USB_B_Micro" H 2307 3196 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Wuerth_629105150521" H 2400 2770 50  0001 C CNN
+F 3 "~" H 2400 2770 50  0001 C CNN
+F 4 "629105150521" H 2250 2820 50  0001 C CNN "manf#"
+	1    2250 2820
+	1    0    0    -1  
+$EndComp
+$Comp
+L BadgeOpenHack-rescue:ATSAMD11C14A-SS-MCU_Microchip_SAMD U1
+U 1 1 5D682696
+P 5270 3340
+F 0 "U1" H 4950 3990 50  0000 C CNN
+F 1 "ATSAMD11C14A-SS" H 5675 3995 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5270 2290 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42363-SAM-D11_Datasheet.pdf" H 5270 2640 50  0001 C CNN
+F 4 "ATSAMD11C14A-SSUT" H 0   0   50  0001 C CNN "manf#"
+	1    5270 3340
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5D683A7E
+P 7575 2150
+F 0 "D1" H 7568 2366 50  0000 C CNN
+F 1 "R_LED" H 7568 2275 50  0000 C CNN
+F 2 "BadgeOpenHack:LYT77K-K2M1-NoHole" H 7575 2150 50  0001 C CNN
+F 3 "https://dammedia.osram.info/media/resource/hires/osram-dam-2492860/LY%20T776.pdf" H 7575 2150 50  0001 C CNN
+F 4 "LY T776-R1S2-26-Z" H 0   0   50  0001 C CNN "manf#"
+	1    7575 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5D76BEF1
+P 9180 4030
+F 0 "#PWR0106" H 9180 3780 50  0001 C CNN
+F 1 "GND" H 9185 3857 50  0000 C CNN
+F 2 "" H 9180 4030 50  0001 C CNN
+F 3 "" H 9180 4030 50  0001 C CNN
+	1    9180 4030
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5D74C6A2
+P 8745 3445
+F 0 "RN1" V 8328 3445 50  0000 C CNN
+F 1 "R_Pack04" V 8419 3445 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 9020 3445 50  0001 C CNN
+F 3 "~" H 8745 3445 50  0001 C CNN
+F 4 "CAY16-221J4LF" V 8745 3445 50  0001 C CNN "manf#"
+	1    8745 3445
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04 RN2
+U 1 1 5D76B49B
+P 8745 3845
+F 0 "RN2" V 8328 3845 50  0000 C CNN
+F 1 "R_Pack04" V 8419 3845 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 9020 3845 50  0001 C CNN
+F 3 "~" H 8745 3845 50  0001 C CNN
+F 4 "CAY16-221J4LF" V 8745 3845 50  0001 C CNN "manf#"
+	1    8745 3845
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9180 3645 9180 3745
+Wire Wire Line
+	8945 3745 9180 3745
+Connection ~ 9180 3745
+Wire Wire Line
+	9180 3745 9180 3845
+Wire Wire Line
+	8945 3845 9180 3845
+Connection ~ 9180 3845
+Wire Wire Line
+	9180 3845 9180 3945
+Wire Wire Line
+	8945 3945 9180 3945
+Connection ~ 9180 3945
+Wire Wire Line
+	9180 3945 9180 4030
+Wire Wire Line
+	8945 3545 9180 3545
+Wire Wire Line
+	9180 3245 9180 3345
+Connection ~ 9180 3545
+Wire Wire Line
+	9180 3545 9180 3645
+Wire Wire Line
+	8945 3445 9180 3445
+Connection ~ 9180 3445
+Wire Wire Line
+	9180 3445 9180 3545
+Wire Wire Line
+	8945 3345 9180 3345
+Connection ~ 9180 3345
+Wire Wire Line
+	9180 3345 9180 3445
 $EndSCHEMATC
