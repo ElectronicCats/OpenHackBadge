@@ -131,19 +131,19 @@ Text Label 4640 3240 2    50   ~ 0
 SWCLK
 Text Label 4640 3340 2    50   ~ 0
 SWDIO
-Text Label 4640 3540 0    50   ~ 0
+Text Label 5950 3440 0    50   ~ 0
 D0
-Text Label 4640 3640 0    50   ~ 0
+Text Label 5940 3340 0    50   ~ 0
 D1
-Text Label 5940 3040 0    50   ~ 0
+Text Label 4640 3640 2    50   ~ 0
 D2
-Text Label 5940 3140 0    50   ~ 0
+Text Label 4640 3540 2    50   ~ 0
 D3
 Text Label 5940 3240 0    50   ~ 0
 D4
-Text Label 5940 3340 0    50   ~ 0
+Text Label 5940 3140 0    50   ~ 0
 D5
-Text Label 5950 3440 0    50   ~ 0
+Text Label 5940 3040 0    50   ~ 0
 D6
 $Comp
 L power:+3.3V #PWR020
@@ -642,8 +642,8 @@ $Comp
 L Device:R_Pack04 RN2
 U 1 1 5D76B49B
 P 8745 3845
-F 0 "RN2" V 8328 3845 50  0000 C CNN
-F 1 "R_Pack04" V 8419 3845 50  0000 C CNN
+F 0 "RN2" V 9035 3850 50  0000 C CNN
+F 1 "R_Pack04" V 8945 3850 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0603" V 9020 3845 50  0001 C CNN
 F 3 "~" H 8745 3845 50  0001 C CNN
 F 4 "CAY16-221J4LF" V 8745 3845 50  0001 C CNN "manf#"
