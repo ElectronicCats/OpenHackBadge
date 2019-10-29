@@ -7,7 +7,9 @@ Este es un badge electronico que hemos creado para nuestros amigos de OpenHack G
 ![Back](https://github.com/ElectronicCats/OpenHackBadge/raw/master/BadgeOpenHack/BadgeOpenHackBottom.png)
 
 
-## Installation Instructions
+### Installation Instructions
+
+**Install SAMD soport**
 
 You must install the boards SAMD of Arduino(vertions 1.6.11 o posterior) 
 
@@ -18,31 +20,32 @@ In the search bar write  "SAMD" en then you can see the boards, do clic in insta
 ![](https://cdn-learn.adafruit.com/assets/assets/000/028/792/original/adafruit_products_arduinosamd162.png)
 
 
+To add board support for our products, start Arduino and open the Preferences window (**File** > **Preferences**). Now copy and paste the following URL into the 'Additional Boards Manager URLs' input field:
 
-## MattairTech D|L|C Core Installation
+	https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json
 
-**See Beta Builds section below to install the beta, as it uses a different json file**
 
-* To update from a previous version, click on MattairTech SAM D|L|C Core for Arduino in Boards Manager, then click Update.
+- If there is already an URL from another manufacturer in that field, click the button at the right end of the field. This will open an editing window allowing you to paste the above URL onto a new line.
 
-1. The MattairTech SAM D|L|C Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
-2. In the Arduino IDE, click File->Preferences.
-3. Click the button next to Additional Boards Manager URLs.
-4. Add `https://www.mattairtech.com/software/arduino/package_MattairTech_index.json.`
-5. Save preferences, then open the Boards Manager.
-6. Install the Arduino SAMD Boards package. Use version 1.6.2 or higher.
-7. Install the MattairTech SAM D|L|C Core for Arduino package.
+- Press the "OK" button.
+- Open the "boards manager" that is in tools --> Board --> board manager.
+- Now write "Electronic Cats" (without quotes) in the search bar.
+- Click in install, jus wait to finish to install and only close the window. 
 
 ![](https://github.com/ElectronicCats/MeowMeow/wiki/assets/Paso1_IDE.png)
 
-8. Close Boards Manager, then click Tools->Board->(choose board).
+- In tools --> Boards, scroll to down in the board´s list you can see the Electronic Cat´s boards.
+
+![](https://github.com/ElectronicCats/MeowMeow/wiki/assets/Paso2_IDE.png)
+
+8. Close Boards Manager, then click Tools->Board->samd11 generic.
 9. Select the MCU with the now visible Tools->Microcontroller menu (if present).
 10. If you do not already have the bootloader or blink sketch installed, see SAM-BA USB CDC Bootloader below.
 11. Plug in the board. The blink sketch should be running.
 12. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
 13. You can now upload your own sketch.
 
-*Currently, with MattairTech boards, USB PIDs are shared across boards (but they are different based on Tools->USB Config).*
+*Currently, with Electronic Cats boards, USB PIDs are shared across boards (but they are different based on Tools->USB Config).*
 *This will result in Tools->Port showing "MattairTech Xeno Mini", for example, for all MattairTech boards.*
 
 ### Uploading the First Sketch
@@ -53,9 +56,6 @@ In the search bar write  "SAMD" en then you can see the boards, do clic in insta
 4. Click the Upload button. After compiling, the sketch should be transferred to the board.
 5. Once the bootloader exits, the blink sketch should be running.
 
-## SAMD11 Core Arduino
-
-More information of [Core Arduino Mattairtech](https://github.com/mattairtech/ArduinoCore-samd)
 
 ## License
 
