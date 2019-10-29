@@ -570,14 +570,14 @@ $EndComp
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 5D688B75
-P 2345 4450
-F 0 "BT1" H 2463 4546 50  0000 L CNN
-F 1 "Battery_Cell" H 2463 4455 50  0000 L CNN
-F 2 "Batteries:BAT-HLD-012-SMT-OTL" V 2345 4510 50  0001 C CNN
-F 3 "https://www.mouser.mx/datasheet/2/238/BAT-HLD-012-SMT%20Diagram-1175215.pdf" V 2345 4510 50  0001 C CNN
-F 4 "BAT-HLD-012-SMT" H 0   0   50  0001 C CNN "manf#"
-	1    2345 4450
-	1    0    0    -1  
+P 2345 4350
+F 0 "BT1" H 2463 4446 50  0000 L CNN
+F 1 "Battery_Cell" H 2463 4355 50  0000 L CNN
+F 2 "Batteries:BAT-HLD-012-SMT-OTL" V 2345 4410 50  0001 C CNN
+F 3 "https://www.mouser.mx/datasheet/2/238/BAT-HLD-012-SMT%20Diagram-1175215.pdf" V 2345 4410 50  0001 C CNN
+F 4 "BAT-HLD-012-SMT" H 0   -100 50  0001 C CNN "manf#"
+	1    2345 4350
+	-1   0    0    1   
 $EndComp
 $Comp
 L Connector:USB_B_Micro J2
